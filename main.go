@@ -1,6 +1,7 @@
 package main
 
 import (
+	"example/test/structTest"
 	"fmt"
 )
 
@@ -29,6 +30,9 @@ func main() {
 
 	fmt.Println("==========testPointer04=============")
 	testPointer04()
+
+	fmt.Println("==========testPointer05=============")
+	testPointer05()
 }
 
 func testPointer01() {
@@ -128,4 +132,8 @@ func (p *person) updateNameFromPointer(newFirstName string) {
 // 每次傳進來的 p 都會是複製一份新的（by value）
 func (p person) updateName(newFirstName string) {
 	p.firstName = newFirstName
+}
+
+func testPointer05() {
+	structTest.Run()
 }
