@@ -26,6 +26,9 @@ func main() {
 
 	fmt.Println("==========testPointer03=============")
 	testPointer03()
+
+	fmt.Println("==========testPointer04=============")
+	testPointer04()
 }
 
 func testPointer01() {
@@ -92,4 +95,35 @@ func testPointer03() {
 	fmt.Println(j) // see the new value of j
 	//73
 
+}
+
+func testPointer04() {
+	jim1 := person{
+		firstName: "Jim1",
+	}
+
+	jim2 := person{
+		firstName: "Jim2",
+	}
+
+	jim1.updateNameFromPointer("Aaron") // It works as expected
+	fmt.Println("01: ", jim1.firstName)
+
+	jim2.updateName("Aaron") // It doesn't work as expected
+	fmt.Println("02: ", jim2.firstName)
+}
+
+type person struct {
+	firstName string
+}
+
+func (p *person) updateNameFromPointer(newFirstName string) {
+	// *variable 表示把該指摽對應的值取出
+	(*p).firstName = newFirstName
+}
+
+// 當沒有使用 *type 時
+// 每次傳進來的 p 都會是複製一份新的（by value）
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
 }
