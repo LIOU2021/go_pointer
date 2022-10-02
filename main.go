@@ -33,6 +33,9 @@ func main() {
 
 	fmt.Println("==========testPointer05=============")
 	testPointer05()
+
+	fmt.Println("==========testPointer06=============")
+	testPointer06()
 }
 
 func testPointer01() {
@@ -136,4 +139,8 @@ func (p person) updateName(newFirstName string) {
 
 func testPointer05() {
 	structTest.Run()
+}
+
+func testPointer06() {
+	structTest.Run2()
 }
