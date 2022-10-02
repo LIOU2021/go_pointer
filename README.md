@@ -10,5 +10,5 @@
 - [& (ampersand) 和 *(Asterisk) 的使用](https://pjchender.dev/golang/pointers/#%E6%8C%87%E6%A8%99%E9%81%8B%E7%AE%97%E5%AD%90pointers-operation)
 
 # 備註
-- 從這繼續看 stuct 
+- 從這繼續看 struct
 - https://pjchender.dev/golang/structs/#interface-fields-nested-interface
