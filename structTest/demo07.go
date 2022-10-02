@@ -11,4 +11,5 @@ func Run7() {
 
 	p1.Introduce() //Hi, I'm p11
 	p2.Introduce() //Hi, I'm p22
+	p1.Introduce() //Hi, I'm p11
 }

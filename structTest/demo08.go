@@ -11,4 +11,5 @@ func Run8() {
 
 	t1.Introduce() //Hi, I'm t11
 	t2.Introduce() //Hi, I'm t22
+	t1.Introduce() //Hi, I'm t11
 }
