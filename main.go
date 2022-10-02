@@ -45,6 +45,9 @@ func main() {
 
 	fmt.Println("==========testPointer09=============")
 	testPointer09()
+
+	fmt.Println("==========testPointer10=============")
+	testPointer10()
 }
 
 func testPointer01() {
@@ -164,4 +167,8 @@ func testPointer08() {
 
 func testPointer09() {
 	structTest.Run5()
+}
+
+func testPointer10() {
+	structTest.Run6()
 }
