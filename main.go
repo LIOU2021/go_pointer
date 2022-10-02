@@ -42,13 +42,15 @@ func testPointer01() {
 	// => 0x1040a120
 
 	//兩變數位址相同
+
+	*greeting = "changed value"
+	fmt.Println(hello)
+	// => "changed value"
 }
 
 func testPointer02() {
 	var (
-		hello = "Hello World!"
-		// 宣告pointer時，型別上要加上*符號，後方reference的變數要加上&符號
-		// greeting *string = &hello
+		hello  = "Hello World!"
 		hello2 = hello
 	)
 	fmt.Println(hello)
@@ -62,4 +64,9 @@ func testPointer02() {
 	//0xc00010e170
 
 	//兩變數位址不同。與testPointer01測試的結果不一樣。
+
+	hello2 = "changed value"
+	fmt.Println(hello)
+	//Hello World!
+	//沒有改變值，因為兩個變數位址不一樣
 }
