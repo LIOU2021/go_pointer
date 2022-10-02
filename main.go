@@ -120,6 +120,8 @@ type person struct {
 func (p *person) updateNameFromPointer(newFirstName string) {
 	// *variable 表示把該指摽對應的值取出
 	(*p).firstName = newFirstName
+	//golang允許直接簡略如下
+	// p.firstName = newFirstName
 }
 
 // 當沒有使用 *type 時
