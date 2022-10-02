@@ -23,13 +23,17 @@ func main() {
 	fmt.Println("==========testPointer02=============")
 
 	testPointer02()
+
+	fmt.Println("==========testPointer03=============")
+	testPointer03()
 }
 
 func testPointer01() {
 	var (
 		hello = "Hello World!"
 		// 宣告pointer時，型別上要加上*符號，後方reference的變數要加上&符號
-		greeting *string = &hello
+		// greeting *string = &hello
+		greeting = &hello
 	)
 
 	fmt.Println(*greeting)
@@ -69,4 +73,23 @@ func testPointer02() {
 	fmt.Println(hello)
 	//Hello World!
 	//沒有改變值，因為兩個變數位址不一樣
+}
+
+func testPointer03() {
+
+	i, j := 42, 2701
+
+	p := &i         // point to i
+	fmt.Println(*p) // read i through the pointer
+	//42
+
+	*p = 21        // set i through the pointer
+	fmt.Println(i) // see the new value of i
+	//21
+
+	p = &j         // point to j
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
+	//73
+
 }
