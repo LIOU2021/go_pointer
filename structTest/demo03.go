@@ -19,6 +19,6 @@ func Run3() {
 		Power:  100,
 	}
 
-	jay.Introduce()
-	jayTest.Introduce()
+	jay.Introduce()     //Hi, I'm Jay
+	jayTest.Introduce() //Hi, I'm JayTest
 }

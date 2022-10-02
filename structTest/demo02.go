@@ -14,6 +14,6 @@ func Run2() {
 		Person: Person{"Mark2"},
 	}
 
-	mark1.Introduce()
-	mark2.Introduce()
+	mark1.Introduce() //Hi, I'm Mark
+	mark2.Introduce() //Hi, I'm Mark2
 }

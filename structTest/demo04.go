@@ -10,6 +10,6 @@ func Run4() {
 		Person: &Person{"mary"},
 	}
 
-	mary.Introduce()
+	mary.Introduce() //Hi, I'm mary
 
 }
